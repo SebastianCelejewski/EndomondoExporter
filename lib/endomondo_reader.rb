@@ -6,9 +6,9 @@ require './lib/endomondo_workout'
 module EndomondoExporter
 	class EndomondoReader
 
-		LOGIN_REQUEST = "http://api.mobile.endomondo.com/mobile/auth?deviceId=dummy&email=%s&password=%s&country=US&action=PAIR";
-		WORKOUTS_LIST_REQUEST = "http://api.mobile.endomondo.com/mobile/api/workout/list?authToken=%s&&maxResults=%s";
-		WORKOUT_REQUEST = "http://api.mobile.endomondo.com/mobile/readTrack?authToken=%s&trackId=%s"
+		LOGIN_REQUEST = "https://api.mobile.endomondo.com/mobile/auth?deviceId=dummy&email=%s&password=%s&country=US&action=PAIR";
+		WORKOUTS_LIST_REQUEST = "https://api.mobile.endomondo.com/mobile/api/workout/list?authToken=%s&&maxResults=%s";
+		WORKOUT_REQUEST = "https://api.mobile.endomondo.com/mobile/readTrack?authToken=%s&trackId=%s"
 
 		def login(login, password)
 			puts "Logging into Endomondo as #{login}."

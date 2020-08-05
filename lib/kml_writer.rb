@@ -2,7 +2,7 @@ require ('./lib/kml_folder')
 
 module EndomondoExporter
 	class KmlWriter
-		def generate_kml(workouts)
+		def generate_kml(user_name, year, workouts)
 
 			root_folder = generate_folder_structure(workouts)
 
@@ -29,7 +29,7 @@ module EndomondoExporter
 			styles.push blueStyle
 			styles.push yellowStyle
 
-			folder = KML::Document.new(:name => "Endomondo Automatic Export", :styles => styles)
+			folder = KML::Document.new(:name => "#{user_name}-#{year}", :styles => styles)
 
 			root_folder.subfolders.reverse!
 			root_folder.subfolders.each do |year|
